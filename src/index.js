@@ -196,6 +196,7 @@ class PhoneInput extends React.Component {
       countryGuess = 0;
     }
 
+
     const dialCode = (
       inputNumber.length < 2 &&
       countryGuess &&
@@ -976,10 +977,9 @@ class PhoneInput extends React.Component {
             aria-expanded={showDropdown ? true : undefined}
           >
             <div className={inputFlagClasses}>
-              {!disableDropdown && <div className={arrowClasses}></div>}
+              {!disableDropdown && <div className={arrowClasses}>{'+' + selectedCountry.dialCode}</div>}
             </div>
           </div>}
-
           {showDropdown && this.getCountryDropdownList()}
         </div>
       </div>

@@ -2,6 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import PhoneInput from '../../src/index';
 import '../../src/style/style.less';
+import ar from '../../lang/ar.json';
+
 
 
 class Demo extends React.Component {
@@ -50,6 +52,7 @@ class Demo extends React.Component {
           <PhoneInput
             country='no'
             excludeCountries={['us', 'ca']}
+            localization={ar}
           />
           <p>Only countries</p>
           <PhoneInput
